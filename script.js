@@ -20,3 +20,7 @@ addEventListener('keydown',e=>{const i=scenes.findIndex(s=>s.classList.contains(
  const go=n=>scenes[Math.max(0,Math.min(scenes.length-1,n))].scrollIntoView({behavior:'smooth'});
  if(['ArrowDown','PageDown',' ','ArrowLeft'].includes(e.key)){e.preventDefault();go(i+1)}
  if(['ArrowUp','PageUp','ArrowRight'].includes(e.key)){e.preventDefault();go(i-1)}});
+
+// graceful fallback if a Figma export is missing
+document.querySelectorAll('img').forEach(im=>{const f=()=>{const p=im.closest('.phone,.vis,.browser,.crop,.scroller')||im.parentElement;p.classList.add('miss');p.dataset.label=(im.getAttribute('src')||'').replace('assets/','')};
+ im.addEventListener('error',f);if(im.complete&&!im.naturalWidth)f()});
