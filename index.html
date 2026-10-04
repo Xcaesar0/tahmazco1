@@ -2,196 +2,248 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e0c0b">
 <title>طهماز — التحول الرقمي | UpToMedia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Noto+Kufi+Arabic:wght@500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="shell">
-  <div class="brand">UpToMedia<i></i><span>عرض لـ طهماز</span></div>
-  <div class="counter"><b id="cur">01</b><span>/ <em id="tot">13</em></span></div>
+  <a class="brand" href="#cover" aria-label="UpToMedia">UpToMedia<i></i><span>عرض لـ طهماز</span></a>
+  <div class="shell-r">
+    <span class="chap" id="chap">الغلاف</span>
+    <span class="counter"><b id="cur">01</b>/<em id="tot">12</em></span>
+    <button class="menu-btn" id="menuBtn" aria-label="الفصول" aria-expanded="false"><i></i><i></i></button>
+  </div>
 </header>
-<nav class="dots" id="dots"></nav>
+<nav class="menu" id="menu" aria-hidden="true"><ol id="menuList"></ol></nav>
 <div class="bar"><i id="bar"></i></div>
 
-<main id="deck">
+<main>
 
 <!-- 01 COVER -->
-<section class="scene cover" data-title="الغلاف">
+<section class="sec cover" id="cover" data-ch="الغلاف">
+  <div class="cover-bg"><img width="2000" height="1361" src="assets/hero.webp" alt="" data-par="-.06" fetchpriority="high"></div>
   <div class="grid-bg"></div>
-  <div class="glow" data-speed="-30"></div>
-  <div class="wrap center">
+  <div class="wrap cover-in">
     <p class="eyebrow r">عرض تقديمي · التحول الرقمي</p>
     <h1 class="mega r d1">طهماز</h1>
-    <p class="lead r d2">من حضور رقمي إلى علاقة رقمية مع التاجر.</p>
+    <p class="lead r d2">من حضور رقمي إلى <b>علاقة رقمية</b> مع التاجر.</p>
     <p class="meta r d3">موقع جديد · تطبيق ولاء</p>
   </div>
-  <div class="scroll-hint">اسحب للأسفل</div>
+  <div class="cover-dev" aria-hidden="true">
+    <div class="phone p1 r d2" data-par=".10"><img src="assets/cs-home.webp" alt=""></div>
+    <div class="phone p2 r d3" data-par=".2"><img src="assets/app-home.webp" alt=""></div>
+  </div>
+  <div class="hint">اسحب للأسفل</div>
 </section>
 
 <!-- 02 TODAY -->
-<section class="scene light" data-title="طهماز اليوم">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow r">01 — طهماز اليوم</p>
-      <h2 class="big r d1">طهماز أكبر من الصورة التي يقدمها <em>حضورها الرقمي</em> الحالي.</h2>
+<section class="sec light today" id="today" data-ch="طهماز اليوم">
+  <div class="wrap grid2">
+    <div class="today-media reveal">
+      <div class="photo" data-par=".04"><img width="2000" height="1333" src="assets/story.webp" alt="" loading="lazy"></div>
     </div>
-    <ul class="facts r d2">
-      <li><b>خبرة صناعية</b><span>حلول ومنتجات ومشاريع حقيقية</span></li>
-      <li><b>حجم وقدرة</b><span>شبكة تاجر ومقاول ومهندس</span></li>
-      <li><b>واجهة لا تعكس ذلك</b><span>الموقع لا يروي القصة كاملة</span></li>
-    </ul>
+    <div class="today-copy">
+      <p class="eyebrow r">01 — طهماز اليوم</p>
+      <h2 class="xl r d1">طهماز أكبر من الصورة التي يقدمها <em>حضورها الرقمي</em> الحالي.</h2>
+      <ul class="facts">
+        <li class="r d2"><i>01</i><b>خبرة صناعية</b><span>حلول ومنتجات ومشاريع حقيقية</span></li>
+        <li class="r d3"><i>02</i><b>حجم وقدرة</b><span>شبكة تاجر ومقاول ومهندس</span></li>
+        <li class="r d4"><i>03</i><b>واجهة لا تعكس ذلك</b><span>الموقع لا يروي القصة كاملة</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- 03 OPPORTUNITY -->
-<section class="scene dark" data-title="الفرصة الرقمية">
+<section class="sec dark opp" id="opp" data-ch="الفرصة الرقمية">
   <div class="grid-bg"></div>
   <div class="wrap">
     <p class="eyebrow r">02 — الفرصة الرقمية</p>
-    <h2 class="big r d1">ثلاث طبقات تحوّل الحضور إلى <em>علاقة</em>.</h2>
-    <div class="steps3">
-      <div class="r d2"><span>01</span><h3>يُرى</h3><p>هوية صناعية تعكس الحجم</p></div>
-      <div class="r d3"><span>02</span><h3>يُكتشف</h3><p>منتجات وحلول ومشاريع بوضوح</p></div>
-      <div class="r d4"><span>03</span><h3>يُستمر</h3><p>تطبيق يربط التاجر بطهماز</p></div>
+    <h2 class="xl r d1">ثلاث طبقات تحوّل الحضور إلى <em>علاقة</em>.</h2>
+    <div class="track reveal">
+      <article><div class="thumb"><img width="2000" height="1361" src="assets/hero.webp" alt="" loading="lazy"></div><span>01</span><h3>يُرى</h3><p>هوية صناعية تعكس الحجم</p></article>
+      <article><div class="thumb"><img width="2000" height="1556" src="assets/products.webp" alt="" loading="lazy"></div><span>02</span><h3>يُكتشف</h3><p>منتجات وحلول ومشاريع بوضوح</p></article>
+      <article><div class="thumb phone-t"><img src="assets/app-home.webp" alt="" loading="lazy"></div><span>03</span><h3>يُستمر</h3><p>تطبيق يربط التاجر بطهماز</p></article>
     </div>
   </div>
 </section>
 
-<!-- 04 PART 1 + HERO -->
-<section class="scene hero-scene" data-title="الموقع الجديد">
-  <div class="wrap top">
+<!-- 04 WEBSITE INTRO -->
+<section class="sec ink web" id="web" data-ch="الجزء الأول — الموقع">
+  <div class="wrap">
     <p class="eyebrow r">الجزء الأول — إعادة تصميم الموقع</p>
-    <h2 class="big r d1">هوية صناعية <em>بحجم طهماز</em>.</h2>
+    <h2 class="xl r d1">هوية صناعية <em>بحجم طهماز</em>.</h2>
   </div>
-  <figure class="browser r d2" data-speed="20">
-    <div class="chrome"><i></i><i></i><i></i><u>tahmaz.com</u></div>
-    <img decoding="async" src="assets/hero.webp" alt="الصفحة الرئيسية">
-  </figure>
-</section>
-
-<!-- 05 ECOSYSTEM / SOLUTIONS -->
-<section class="scene dark" data-title="المنظومة والحلول">
-  <div class="wrap split rev">
-    <div class="copy">
-      <p class="eyebrow r">تجربة الموقع</p>
-      <h2 class="big r d1">منظومة واحدة،<br>وحلول <em>واضحة</em>.</h2>
-      <p class="lead r d2">عرض أوضح للحلول وطريقة عمل طهماز، بدل قوائم طويلة.</p>
-    </div>
-    <div class="stack">
-      <figure class="crop wide r d1" data-speed="-14"><img loading="lazy" decoding="async" src="assets/ecosystem.webp" alt=""></figure>
-      <figure class="crop wide offset r d3" data-speed="26"><img loading="lazy" decoding="async" src="assets/solutions.webp" alt=""></figure>
-    </div>
-  </div>
-</section>
-
-<!-- 06 PRODUCTS -->
-<section class="scene light" data-title="المنتجات">
-  <div class="wrap split">
-    <div class="copy">
-      <p class="eyebrow r">تجربة المنتجات</p>
-      <h2 class="big r d1">اكتشاف المنتج <em>أسرع</em>.</h2>
-      <p class="lead r d2">منتجات مختارة، فئات واضحة، وطريق قصير إلى الطلب.</p>
-    </div>
-    <figure class="browser small r d2" data-speed="16">
-      <div class="chrome"><i></i><i></i><i></i></div>
-      <img loading="lazy" decoding="async" src="assets/products.webp" alt="">
+  <div class="bleed">
+    <figure class="browser xl-b" data-zoom>
+      <div class="chrome"><i></i><i></i><i></i><u>tahmaz.com</u></div>
+      <img width="2000" height="1361" src="assets/hero.webp" alt="الصفحة الرئيسية" loading="eager">
     </figure>
   </div>
 </section>
 
-<!-- 07 PROJECTS -->
-<section class="scene dark" data-title="المشاريع">
-  <div class="wrap split rev">
-    <div class="copy">
+<!-- 05 WEBSITE SCRUB -->
+<section class="sec ink scrub pages" id="pages" data-ch="تجربة الموقع" data-scrub>
+  <div class="pin">
+    <div class="wrap pin-head">
+      <p class="eyebrow">تجربة الموقع</p>
+      <h2 class="big" id="pgT">هوية صناعية بحجم طهماز</h2>
+      <p class="lead" id="pgS">الصفحة الرئيسية</p>
+    </div>
+    <div class="pg-stage">
+      <figure class="browser desk">
+        <div class="chrome"><i></i><i></i><i></i><u>tahmaz.com</u></div>
+        <div class="vp"><div class="stack" id="stackD">
+          <img width="2000" height="1361" src="assets/hero.webp" alt="" data-t="هوية صناعية بحجم طهماز" data-s="الصفحة الرئيسية">
+          <img width="2000" height="1500" src="assets/ecosystem.webp" alt="" data-t="منظومة واحدة، وحلول واضحة" data-s="عرض أوضح للحلول وطريقة عمل طهماز، بدل قوائم طويلة.">
+          <img width="2000" height="1556" src="assets/products.webp" alt="" data-t="اكتشاف المنتج أسرع" data-s="منتجات مختارة، فئات واضحة، وطريق قصير إلى الطلب.">
+          <img width="2000" height="1333" src="assets/solutions.webp" alt="" data-t="اختر المجال، تظهر لك الحلول" data-s="تنقّل مباشر بين القطاعات والتطبيقات.">
+        </div></div>
+      </figure>
+      <div class="phone mob-phone"><div class="vp"><div class="stack" id="stackM">
+        <img width="780" height="1680" src="assets/m-hero.webp" alt="" data-t="هوية صناعية بحجم طهماز" data-s="الصفحة الرئيسية على الجوال">
+        <img width="780" height="2728" src="assets/m-products.webp" alt="" data-t="اكتشاف المنتج أسرع" data-s="منتجات مختارة، فئات واضحة، وطريق قصير إلى الطلب.">
+        <img width="780" height="4660" src="assets/m-projects.webp" alt="" data-t="الخبرة تُرى في الميدان" data-s="مشاريع حقيقية بصور صناعية وتفاصيل هندسية.">
+      </div></div></div>
+    </div>
+    <div class="ticks" id="ticks"></div>
+  </div>
+</section>
+
+<!-- 06 DETAILS: PROJECTS -->
+<section class="sec dark details" id="details" data-ch="المشاريع والخبرة">
+  <div class="wrap grid2 rev-top">
+    <div>
       <p class="eyebrow r">المشاريع والخبرة</p>
-      <h2 class="big r d1">الخبرة تُرى<br>في <em>الميدان</em>.</h2>
-      <p class="lead r d2">مشاريع حقيقية بصور صناعية وتفاصيل هندسية.</p>
+      <h2 class="xl r d1">الخبرة تُرى<br>في <em>الميدان</em>.</h2>
     </div>
-    <figure class="scroller r d2">
-      <img loading="lazy" decoding="async" src="assets/projects.webp" alt="" class="autoscroll">
+    <p class="lead r d2">مشاريع حقيقية بصور صناعية وتفاصيل هندسية.</p>
+  </div>
+  <div class="proj-wrap">
+    <figure class="browser proj" data-scrubwin>
+      <div class="chrome"><i></i><i></i><i></i><u>tahmaz.com/projects</u></div>
+      <div class="vp"><img width="2000" height="2889" src="assets/projects.webp" alt="" loading="lazy"></div>
     </figure>
+    <div class="float f1" data-par=".16"><div class="detail d-eco"></div></div>
+    <div class="float f2" data-par="-.12"><div class="detail d-prod"></div></div>
   </div>
 </section>
 
-<!-- 08 MOBILE -->
-<section class="scene light" data-title="الجوال">
+<!-- 07 MOBILE -->
+<section class="sec light mobile" id="mobile" data-ch="تجربة الجوال" data-scrub>
   <div class="wrap center">
     <p class="eyebrow r">تجربة الجوال</p>
     <h2 class="big r d1">الجوال <em>أولاً</em>، لأن التاجر في الموقع.</h2>
-    <div class="phones">
-      <div class="phone r d1" data-speed="30"><img src="assets/m-hero.webp" alt=""></div>
-      <div class="phone r d2 mid" data-speed="-10"><img src="assets/m-products.webp" alt="" class="pan"></div>
-      <div class="phone r d3" data-speed="30"><img src="assets/m-projects.webp" alt="" class="pan"></div>
+  </div>
+  <div class="phones3">
+    <div class="phone ph-a" data-par=".14"><img width="780" height="1680" src="assets/m-hero.webp" alt="" loading="lazy" data-pan></div>
+    <div class="phone ph-b" data-par="-.06"><img width="780" height="2728" src="assets/m-products.webp" alt="" loading="lazy" data-pan></div>
+    <div class="phone ph-c" data-par=".14"><img width="780" height="4660" src="assets/m-projects.webp" alt="" loading="lazy" data-pan></div>
+  </div>
+</section>
+
+<!-- 08 APP CURTAIN -->
+<section class="sec scrub app" id="app" data-ch="الجزء الثاني — التطبيق" data-scrub>
+  <div class="pin">
+    <div class="curtain"></div>
+    <div class="grid-bg"></div>
+    <div class="wrap center app-in">
+      <p class="eyebrow">الجزء الثاني</p>
+      <h2 class="mega">تطبيق طهماز</h2>
+      <p class="lead">محفظة ولاء بسيطة للتاجر — امتداد طبيعي للعلاقة مع طهماز.</p>
+    </div>
+    <div class="app-dev" aria-hidden="true">
+      <div class="phone a1"><img src="assets/app-home.webp" alt=""></div>
+      <div class="phone a2"><img src="assets/cs-home.webp" alt=""></div>
     </div>
   </div>
 </section>
 
-<!-- 09 PART 2 -->
-<section class="scene red" data-title="التطبيق">
-  <div class="grid-bg"></div>
-  <div class="wrap center">
-    <p class="eyebrow r">الجزء الثاني</p>
-    <h2 class="mega r d1">تطبيق طهماز</h2>
-    <p class="lead r d2">محفظة ولاء بسيطة للتاجر — امتداد طبيعي للعلاقة مع طهماز.</p>
-  </div>
-</section>
-
-<!-- 10 EARN -->
-<section class="scene dark" data-title="كسب النقاط">
-  <div class="wrap">
-    <p class="eyebrow r">كيف تُكسب النقاط</p>
-    <h2 class="big r d1">فاتورة. <em>مسح.</em> نقاط.</h2>
-    <div class="flow">
-      <div class="node r d1"><div class="vis"><img loading="lazy" decoding="async" src="assets/receipt.webp" alt=""></div><h3>شراء من طهماز</h3><p>فاتورة تحتوي رمز QR</p></div>
-      <i class="arrow">←</i>
-      <div class="node r d2"><div class="vis"><img loading="lazy" decoding="async" src="assets/s-ready.webp" alt=""></div><h3>مسح الفاتورة</h3><p>من داخل التطبيق</p></div>
-      <i class="arrow">←</i>
-      <div class="node r d3"><div class="vis"><img loading="lazy" decoding="async" src="assets/s-success.webp" alt=""></div><h3>إضافة النقاط</h3><p>فوراً إلى الحساب</p></div>
+<!-- 09 EARN -->
+<section class="sec dark scrub flow earn" id="earn" data-ch="كسب النقاط" data-scrub data-steps="4">
+  <div class="pin">
+    <div class="grid-bg"></div>
+    <div class="wrap flow-grid">
+      <div class="flow-copy">
+        <p class="eyebrow">كيف تُكسب النقاط</p>
+        <h2 class="big">فاتورة. <em>مسح.</em> نقاط.</h2>
+        <ol class="rail">
+          <li><b>01</b><h3>شراء من طهماز</h3><p>فاتورة تحتوي رمز QR</p></li>
+          <li><b>02</b><h3>فاتورة QR</h3><p>رمز فريد لكل فاتورة</p></li>
+          <li><b>03</b><h3>مسح بالتطبيق</h3><p>من داخل التطبيق</p></li>
+          <li><b>04</b><h3>نقاط</h3><p>تُضاف فوراً إلى الحساب</p></li>
+        </ol>
+        <div class="dots4"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="stage ea" dir="ltr">
+        <div class="halo"></div>
+        <div class="receipt"><img src="assets/receipt.webp" alt="" loading="lazy"><i class="ring"></i></div>
+        <div class="beam"></div>
+        <div class="phone ph-scan"><img src="assets/s-ready.webp" alt="" loading="lazy"><i class="scanline"></i></div>
+        <div class="phone ph-ok"><img src="assets/s-success.webp" alt="" loading="lazy"></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 11 REDEEM -->
-<section class="scene light" data-title="استخدام النقاط">
-  <div class="wrap">
-    <p class="eyebrow r">كيف تُستخدم النقاط</p>
-    <h2 class="big r d1">رمز مؤقت. <em>مسح.</em> خصم.</h2>
-    <ol class="redeem">
-      <li class="r d1"><span>1</span><h3>استخدام النقاط</h3><p>التاجر يختار الاستبدال</p></li>
-      <li class="r d2"><span>2</span><h3>QR مؤقت</h3><p>يظهر من تطبيق العميل</p></li>
-      <li class="r d3"><span>3</span><h3>الموظف يمسح</h3><p>من تطبيق خدمة العملاء</p></li>
-      <li class="r d4"><span>4</span><h3>خصم النقاط</h3><p>من الحساب مباشرة</p></li>
-    </ol>
+<!-- 10 REDEEM -->
+<section class="sec light scrub flow redeem" id="redeem" data-ch="استخدام النقاط" data-scrub data-steps="4">
+  <div class="pin">
+    <div class="wrap flow-grid">
+      <div class="flow-copy">
+        <p class="eyebrow">كيف تُستخدم النقاط</p>
+        <h2 class="big">رمز مؤقت. <em>مسح.</em> خصم.</h2>
+        <ol class="rail">
+          <li><b>01</b><h3>استخدام النقاط</h3><p>التاجر يختار الاستبدال</p></li>
+          <li><b>02</b><h3>QR العميل</h3><p>رمز مؤقت من تطبيق العميل</p></li>
+          <li><b>03</b><h3>مسح الموظف</h3><p>من تطبيق خدمة العملاء</p></li>
+          <li><b>04</b><h3>خصم النقاط</h3><p>من الحساب مباشرة</p></li>
+        </ol>
+        <div class="dots4"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="stage rd" dir="ltr">
+        <div class="phone cust"><img src="assets/app-home.webp" alt="" loading="lazy"><i class="hl"></i></div>
+        <div class="phone cs"><img src="assets/cs-home.webp" alt="" loading="lazy"><i class="scanline"></i></div>
+        <div class="qr" id="qr"><span class="timer">00:30</span></div>
+        <div class="pts"><small>رصيد النقاط</small><b id="pts">2,350</b><em>− 500</em></div>
+        <span class="tag t-c">تطبيق العميل</span><span class="tag t-s">تطبيق خدمة العملاء</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- 12 APP SCREENS -->
-<section class="scene dark" data-title="شاشات التطبيق">
+<!-- 11 BOTH SIDES -->
+<section class="sec dark pair" id="pair" data-ch="طرفا العلاقة">
   <div class="grid-bg"></div>
-  <div class="wrap split">
+  <div class="pair-band" data-par=".08"><img width="2000" height="778" src="assets/promo-activity.webp" alt="" loading="lazy"></div>
+  <div class="wrap grid2 pair-grid">
     <div class="copy">
       <p class="eyebrow r">طرفا العلاقة</p>
-      <h2 class="big r d1">تطبيق للتاجر.<br>وتطبيق <em>لخدمة العملاء</em>.</h2>
+      <h2 class="xl r d1">تطبيق للتاجر.<br>وتطبيق <em>لخدمة العملاء</em>.</h2>
       <p class="lead r d2">رصيد النقاط وآخر النشاط للعميل، ومسح ومتابعة العمليات للموظف.</p>
     </div>
     <div class="duo">
-      <div class="phone big r d1" data-speed="-20"><img loading="lazy" decoding="async" src="assets/app-home.webp" alt=""><em>العميل</em></div>
-      <div class="phone big r d3" data-speed="30"><img loading="lazy" decoding="async" src="assets/cs-home.webp" alt=""><em>خدمة العملاء</em></div>
+      <div class="phone d-a r d1" data-par=".08"><img src="assets/app-home.webp" alt="" loading="lazy"><em>العميل</em></div>
+      <div class="phone d-b r d3" data-par="-.08"><img src="assets/cs-home.webp" alt="" loading="lazy"><em>خدمة العملاء</em></div>
     </div>
   </div>
 </section>
 
-<!-- 13 VALUE -->
-<section class="scene cover end" data-title="القيمة">
+<!-- 12 VALUE -->
+<section class="sec cover end" id="value" data-ch="القيمة النهائية">
+  <div class="cover-bg"><img width="2000" height="794" src="assets/promo-hero.webp" alt="" data-par="-.05" loading="lazy"></div>
   <div class="grid-bg"></div>
-  <div class="glow" data-speed="-30"></div>
-  <div class="wrap center">
+  <div class="wrap center end-in">
     <p class="eyebrow r">القيمة النهائية</p>
-    <h2 class="big r d1">من موقع يعرّف بطهماز<br>إلى <em>علاقة لا تنقطع</em> مع تجارها.</h2>
-    <div class="values r d2"><span>حضور أقوى</span><span>اكتشاف أسهل</span><span>ولاء قابل للقياس</span></div>
+    <h2 class="xl r d1">من موقع يعرّف بطهماز<br>إلى <em>علاقة لا تنقطع</em> مع تجارها.</h2>
+    <p class="values r d2"><span>حضور أقوى</span><i></i><span>اكتشاف أسهل</span><i></i><span>ولاء قابل للقياس</span></p>
     <p class="meta r d3">UpToMedia</p>
   </div>
 </section>
