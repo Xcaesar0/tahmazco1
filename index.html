@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Noto+Kufi+Arabic:wght@500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -28,17 +28,26 @@
 
 <!-- 01 COVER -->
 <section class="sec cover" id="cover" data-ch="الغلاف">
-  <div class="cover-bg"><img width="2000" height="1361" src="assets/hero.webp" alt="" data-par="-.06" fetchpriority="high"></div>
   <div class="grid-bg"></div>
-  <div class="wrap cover-in">
-    <p class="eyebrow r">عرض تقديمي · التحول الرقمي</p>
-    <h1 class="mega r d1">طهماز</h1>
-    <p class="lead r d2">من حضور رقمي إلى <b>علاقة رقمية</b> مع التاجر.</p>
-    <p class="meta r d3">موقع جديد · تطبيق ولاء</p>
-  </div>
-  <div class="cover-dev" aria-hidden="true">
-    <div class="phone p1 r d2" data-par=".10"><img src="assets/cs-home.webp" alt=""></div>
-    <div class="phone p2 r d3" data-par=".2"><img src="assets/app-home.webp" alt=""></div>
+  <div class="cover-grid">
+    <div class="cover-copy">
+      <p class="eyebrow r">عرض تقديمي · التحول الرقمي</p>
+      <h1 class="mega r d1">طهماز</h1>
+      <p class="lead r d2">من حضور رقمي إلى <b>علاقة رقمية</b> مع التاجر.</p>
+      <ul class="cover-parts r d3">
+        <li><i>01</i><b>موقع جديد</b><span>هوية صناعية وتجربة اكتشاف أوضح</span></li>
+        <li><i>02</i><b>تطبيق ولاء</b><span>محفظة نقاط تربط التاجر بطهماز</span></li>
+      </ul>
+    </div>
+    <div class="cover-stage" dir="ltr" aria-hidden="true">
+      <div class="c-ring"></div>
+      <figure class="browser c-web r d1" data-par=".05">
+        <div class="chrome"><i></i><i></i><i></i><u>tahmaz.com</u></div>
+        <img width="2000" height="1361" src="assets/hero.webp" alt="" fetchpriority="high">
+      </figure>
+      <div class="phone c-app r d3" data-par=".12"><img width="780" height="1688" src="assets/app-home.webp" alt=""></div>
+      <span class="c-tag t1">01 · الموقع</span><span class="c-tag t2">02 · التطبيق</span>
+    </div>
   </div>
   <div class="hint">اسحب للأسفل</div>
 </section>
