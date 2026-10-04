@@ -103,3 +103,7 @@ h1,h2,h3{font-family:"Noto Kufi Arabic",sans-serif;font-weight:800;line-height:1
 .miss::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;color:var(--mut);font:12px "JetBrains Mono";letter-spacing:.1em}
 .phone.miss,.node .vis.miss{min-height:0}
 @media(max-height:760px){.scene{padding:80px 0 40px}.big{font-size:clamp(26px,3.2vw,46px)}}
+/* fit-to-viewport tuning */
+.stack .crop{max-height:36vh}.stack .crop img{height:36vh;object-fit:cover;object-position:top}
+.phones .phone{height:min(46vh,440px)}.phones .phone.mid{height:min(52vh,500px);margin-top:-14px}
+.scroller{height:66vh}
