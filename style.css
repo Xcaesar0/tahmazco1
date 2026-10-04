@@ -110,27 +110,19 @@ em{font-style:normal;color:var(--orange)}.light em{color:#c4501a}
 /* details */
 .details .rev-top{margin-bottom:clamp(30px,6vh,70px);align-items:end}
 .proj-wrap{position:relative;width:min(1240px,100% - var(--gut)*2);margin-inline:auto}
-.proj .vp{height:min(78svh,720px)}
-.proj .vp img{width:100%;height:auto;will-change:transform}
-.float{position:absolute;z-index:3;pointer-events:none}
-.detail{background-repeat:no-repeat;background-color:#2a2522;box-shadow:0 40px 80px -20px #000d,0 0 0 1px #fff2;border-radius:14px}
-.f1{inset-inline-end:-3%;top:6%;width:clamp(150px,24vw,340px)}
-.f2{inset-inline-start:-4%;bottom:6%;width:clamp(150px,22vw,320px)}
-.d-eco{aspect-ratio:1;background-image:url(assets/ecosystem.webp);background-size:210% auto;background-position:8% 56%;border-radius:50%}
-.d-prod{aspect-ratio:5/4;background-image:url(assets/products.webp);background-size:260% auto;background-position:8% 95%}
+.proj .vp{height:auto}
+.proj .vp img{width:100%;height:auto}
 /* mobile section */
 .mobile{padding-bottom:0}
 .phones3{display:flex;justify-content:center;align-items:flex-start;gap:clamp(14px,3vw,48px);margin-top:clamp(40px,7vh,80px);height:min(66svh,620px);overflow:clip;position:relative}
 .phones3 .phone{width:clamp(110px,20vw,260px);box-shadow:0 50px 90px -24px #0009,0 0 0 1.5px #2a2522}
 .phones3 .ph-b{width:clamp(120px,23vw,300px);margin-top:-26px;order:0}
-.phones3 .phone>img{object-position:50% calc(var(--p,0)*100%);transition:none}
-.phones3 .ph-a>img{object-position:50% calc(var(--p,0)*100%)}
 /* APP curtain */
 .app{--len:210svh;background:var(--ink)}
 .app .pin{justify-content:center;align-items:center;padding:0}
 .curtain{position:absolute;inset:0;background:radial-gradient(120% 100% at 80% 0,#b0301e,var(--red) 55%,#2a0805);clip-path:circle(calc(var(--p,0)*1.6*100%) at 50% 100%)}
 .app-in{opacity:calc((var(--p,0) - .15)*3);transform:translateY(calc((1 - var(--p,0))*60px));z-index:3}
-.app-in .mega{margin:6px 0 0}.app-in .lead{margin-top:14px}
+.app-in .mega{margin:6px 0 0;font-size:clamp(64px,12.5vw,190px)}.app-in .lead{margin-top:14px}
 .app-dev{position:absolute;inset:auto 0 -12vh 0;display:flex;justify-content:space-between;padding-inline:var(--gut);direction:ltr;pointer-events:none}
 .app-dev .phone{width:clamp(120px,17vw,250px);transform:translateY(calc((1 - var(--p,0))*60vh))}
 .app-dev .a2{margin-top:40px;transform:translateY(calc((1 - var(--p,0))*80vh))}
@@ -229,8 +221,6 @@ em{font-style:normal;color:var(--orange)}.light em{color:#c4501a}
   .pin-head{grid-template-columns:1fr;gap:6px}.pin-head .lead{max-width:none;font-size:14px;min-height:3.2em}
   .pin-head .big{min-height:2.8em}
   .pages{--len:360svh}
-  .proj .vp{height:62svh}
-  .float{display:none}.f2{display:block;width:34vw;inset-inline-start:-3vw;bottom:-18px}
   .phones3{height:min(54svh,460px);gap:10px;padding-inline:12px}
   .phones3 .phone{width:29vw;border-radius:18px}.phones3 .ph-b{width:33vw}
   /* app */

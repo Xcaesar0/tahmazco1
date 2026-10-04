@@ -36,7 +36,7 @@ requestAnimationFrame(() => $('#cover').classList.add('in'));
 })();
 
 /* ---- scroll engine ---- */
-const scrubs = $$('[data-scrub]'), pars = $$('[data-par]'), zooms = $$('[data-zoom]'), wins = $$('[data-scrubwin]');
+const scrubs = $$('[data-scrub]'), pars = $$('[data-par]'), zooms = $$('[data-zoom]');
 const pagesSec = $('#pages'), stacks = { d: $('#stackD'), m: $('#stackM') }, ticksEl = $('#ticks');
 const pgT = $('#pgT'), pgS = $('#pgS');
 let pgIdx = -1, pgKey = '';
@@ -107,11 +107,6 @@ function frame() {
     const d = (r.top + r.height / 2 - vh / 2); el.style.translate = `0 ${(-d * parseFloat(el.dataset.par) * k).toFixed(1)}px`;
   });
   zooms.forEach(el => { const r = el.getBoundingClientRect(); if (r.top > vh || r.bottom < 0) return; const t = clamp(1 - r.top / vh); el.style.setProperty('--z', (1 + (mobile.matches ? .06 : .16) * (1 - t)).toFixed(3)); });
-  wins.forEach(w => {
-    const r = w.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return;
-    const vp = $('.vp', w), im = $('img', vp), p = clamp((vh - r.top) / (vh + r.height));
-    im.style.transform = `translate3d(0,${-(Math.max(0, im.offsetHeight - vp.clientHeight)) * p}px,0)`;
-  });
 }
 const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
 addEventListener('scroll', req, { passive: true });
